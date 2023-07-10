@@ -1,8 +1,5 @@
 export const Button = {
     MuiButton:{
-        defaultProps:{
-            variant: 'outline'
-        },
         styleOverrides:{
             root:{
                 backgroundColor: '#4768FF', 
