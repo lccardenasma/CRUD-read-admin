@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import { Title} from 'react-admin';
 export default () => (
     <Card>
-        <Title title="Welcome" />
+        <Title className="" title="Welcome" />
         <CardContent>
             <h1>Welcome</h1>
         </CardContent>
