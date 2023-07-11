@@ -6,8 +6,7 @@ export const Button = {
                 color:'white', 
                 padding: '8px 12px 8px 8px',
                 width: '242px',
-                textTransform: "capitalize"
-                
+                textTransform: "capitalize"   
             }
         }
     }

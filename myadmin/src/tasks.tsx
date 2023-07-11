@@ -14,6 +14,8 @@ import {
 import { MyToolbar } from './MyToolbar';
 import { Box } from "@material-ui/core";
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import { Typography } from '@mui/material';
+
 
 const ListActions = () => (
   <TopToolbar>
@@ -44,9 +46,12 @@ export const taskList = () => (
 export const taskCreate = () => (
   <Create>
     <SimpleForm toolbar={<MyToolbar />}>
-      <TextInput source="Task" validate={[required()]} fullWidth />
-      <TextInput source="Description" validate={[required()]} multiline fullWidth />
-      <SelectInput source="State" validate={[required()]} choices={[
+      <Typography variant="h4" className="label-field">Task</Typography>
+      <TextInput source="Task" prefix="Tarea" variant="outlined" validate={[required()]} fullWidth />
+      <Typography variant="h4" className="label-field">Description</Typography>
+      <TextInput source="Description" label="Description" variant="outlined" validate={[required()]} multiline minRows={3} maxRows={3} fullWidth />
+      <Typography variant="h4" className="label-field">State</Typography>
+      <SelectInput source="State" variant="outlined" validate={[required()]} choices={[
         { id: 'done', name: 'Done' },
         { id: 'process', name: 'In progress' },
         { id: 'pending', name: 'Pending' },
@@ -57,9 +62,9 @@ export const taskCreate = () => (
 export const taskEdit = () => (
   <Edit>
     <SimpleForm>
-      <TextInput source="Task" validate={[required()]} fullWidth />
-      <TextInput source="Description" validate={[required()]} multiline fullWidth />
-      <SelectInput source="State" choices={[
+      <TextInput source="Task" variant="outlined" validate={[required()]} fullWidth />
+      <TextInput source="Description" variant="outlined" validate={[required()]} multiline minRows={3} maxRows={3} fullWidth />
+      <SelectInput source="State" variant="outlined" choices={[
         { id: 'done', name: 'Done' },
         { id: 'process', name: 'In progress' },
         { id: 'pending', name: 'Pending' },
